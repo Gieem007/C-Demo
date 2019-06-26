@@ -1,0 +1,14 @@
+public class JieCheng{
+    public static void main(String[] args){
+    long m = 0L;
+    for(int i=0;i<=20;i++){
+      m += factorial(i);
+    }
+    }
+    private static long factorial(int n){
+       if(n==0 || n==1){
+       return 1;
+       }
+       return n*factorial(n-1);
+    }
+}
