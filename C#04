@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class MaxCount
+    {
+        public int FindMax(int num1,int num2)
+        {
+            int result;
+            if (num1 > num2)
+            {
+                result = num1;
+            }
+            else
+            {
+                result = num2;
+            }
+            return result;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 100, b = 250;
+            int ret;
+            MaxCount mc = new MaxCount();
+            ret = mc.FindMax(a, b);
+            Console.WriteLine("最大值为：{0}", ret);
+            Console.ReadLine();
+
+        }
+    }
+}
