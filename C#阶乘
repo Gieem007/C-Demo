@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class jiecheng
+    {
+        public int Jc(int num)
+        {
+            return num > 0 ? num * Jc(num - 1) : 1;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            jiecheng j = new jiecheng();
+            int result = j.Jc(Convert.ToInt32(Console.ReadLine()));
+            Console.WriteLine("result is {0}", result);
+            Console.ReadKey();
+        }
+    }
+}
