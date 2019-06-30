@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp13
+{
+    class Program
+    {
+        private double length;
+        public Program()
+        {
+            Console.WriteLine("对象已创建");
+        }
+        ~Program()//析构函数
+        {
+            Console.WriteLine("对象已删除");
+        }
+        public void setLength(double len)
+        {
+           length = len;
+        }
+        public double getLength()
+        {
+            return length;
+        }
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            p.setLength(3.0);
+            Console.WriteLine("线条长度：{0}", p.getLength());
+            //Console.ReadLine();
+        }
+    }
+}
